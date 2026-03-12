@@ -23,6 +23,7 @@ export async function POST(req: NextRequest) {
           'Authorization': `Bearer ${serviceKey}`,
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify({}),
       }
     )
 
