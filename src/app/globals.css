@@ -1,0 +1,66 @@
+/* src/app/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #080b12;
+  --surface: #0e1420;
+  --surface2: #141c2e;
+  --surface3: #1a2338;
+  --border: #1e2d45;
+  --border2: #243552;
+  --text: #e8edf5;
+  --text2: #8a9bb8;
+  --text3: #4a5f7a;
+  --accent: #5b8cff;
+  --accent-dark: #3d6bff;
+  --green: #3dffa0;
+  --red: #ff4d6a;
+  --yellow: #ffd54d;
+  --purple: #bf4dff;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text3); }
+
+/* Animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+@keyframes slideUp {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-spin { animation: spin 0.8s linear infinite; }
+.animate-pulse { animation: pulse 1.5s ease infinite; }
+.animate-slide-up { animation: slideUp 0.2s ease; }
+.animate-slide-in { animation: slideIn 0.2s ease; }

@@ -1,0 +1,13 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "functions": {
+    "src/app/api/process-video/route.ts": {
+      "maxDuration": 300
+    },
+    "src/app/api/style-packs/[id]/analyze/route.ts": {
+      "maxDuration": 300
+    }
+  }
+}
